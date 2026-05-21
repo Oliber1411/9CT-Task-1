@@ -36,3 +36,4 @@ Field Datatype Format for Display Description Example Validation
 | Subject | str | XX...XX | The school subject | Maths, English | Can be any amount of characters but cannot include numbers. |
 | Grade | str | X | The grade gotten | A, B, E | Must be a single character. |
 | Homework rate | int64 | NN | The amount of homework gotten, reported by the student | 01, 06, 10 | A two digit number between 1 and 10 |
+
