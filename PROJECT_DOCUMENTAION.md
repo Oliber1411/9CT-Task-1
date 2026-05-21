@@ -61,9 +61,9 @@ Field Datatype Format for Display Description Example Validation
 | Grade | str | X | The grade gotten | A, B, E | Must be a single character. |
 | Homework rate | int64 | NN | The amount of homework gotten, reported by the student | 01, 06, 10 | A two digit number between 1 and 10 |
 
-# Final Discussion
+## Final Discussion
 
 E grading students tend to say that they get significantly more homework when compared to B or C students, with A students being the most varied, with many highs and lows, suggesting to me that a sound amount of homework is beneficial but many students get too much homework and are negatively impacted by it, as supported by study 3\. In real life, studying too much can stress you out and lead to worse results. Perhaps that's what is happening with this homework, too much is being given to students who already believe they do worse at maths (and other subjects though the amount of homework was significantly less), stressing them out and actually making their results worse rather than better. Overall I think a general decrease in homework (not by much) might benefit students in their understanding of mathematics, though other subjects seem to be *mostly* fine.
 
 
-### Analysis
+# EVALUATION
