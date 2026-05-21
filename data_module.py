@@ -28,6 +28,13 @@ def subj_choice():
                 else:
                     print("Invalid subject, try again")
                     subj_choice()
+            elif query == "1":
+                print(DSS_df[["Math test grades", "Science test grades", "Geography test grades", "English test grades"]])
+            elif query == "2":
+                print(DSS_df[["Homework rate: maths", "Homework rate: science", "Homework rate: geography", "Homework rate: english"]])
+            else:
+                print("Invalid choice, try again")
+                subj_choice()
 
 def chice():
     choice = input("Enter choice (1-4) ")
@@ -55,13 +62,11 @@ def clear_screen():
 
 
 def plot():
-    DSS_df.plot(
-        kind="bar",
-         x= "Homework rate: maths",
-         y="Math test grades",
-         color="blue", 
-        title="Maths Homework vs Test Grades"
-    )
-    plt.show()    
-
-
+    subbywubby = input("Enter subject (maths/science/geography/english): ")
+    if subbywubby.strip().lower() == "maths":
+        plt.bar(DSS_df["Math test grades"], DSS_df["Homework rate: maths"])
+        plt.xlabel("Math test grades")
+        plt.ylabel("Homework rate: maths")
+        plt.title("Math test grades vs Homework rate: maths")
+        plt.show()
+    

@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import data_module
 from data_module import DSS_df, subj_choice, chice, clear_screen, plot
+# Source - https://stackoverflow.com/q/62534037
+# Posted by Morgpan
+# Retrieved 2026-05-21, License - CC BY-SA 4.0
+
+
 
 DSS_df = pd.read_csv("Data/DSS.csv")
 
@@ -15,7 +20,7 @@ def menu():
         print("|                          |")
         print("|    2. Search data        |")
         print("|                          |")
-        print("|  3. View average versus  |")
+        print("|   3. View visualizations |")
         print("|                          |")
         print("|    6. Quit               |")
         print("----------------------------")
@@ -44,4 +49,3 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-
