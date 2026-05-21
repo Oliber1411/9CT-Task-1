@@ -41,7 +41,7 @@ data has remained.
 
 ### Functional requirements:
 The System should be able to load csv files as graphs and display data even if it has missing values.
-The System should allow for the filtering of subjects grades vs their amount of homework. As well as comparing subjects to each other.
+The System should allow for the filtering of subjects grades vs their amount of homework.
 The System should display the averages of each subjects grades and home work levels.
 The System should display data through the matplotlib graphs, specifically bar charts because i like them
 The System should store final data set in the DSS csv file
@@ -51,7 +51,7 @@ The system should not have errors.
 ### Non-funtional requirements:
 user interface should be clear and easy to understand, the options should be self explanatory.
 The system should not have errors.
-The system should enure data is saved properly and is correctly edited.
+
 
 Field Datatype Format for Display Description Example Validation
 
@@ -65,5 +65,20 @@ Field Datatype Format for Display Description Example Validation
 
 E grading students tend to say that they get significantly more homework when compared to B or C students, with A students being the most varied, with many highs and lows, suggesting to me that a sound amount of homework is beneficial but many students get too much homework and are negatively impacted by it, as supported by study 3\. In real life, studying too much can stress you out and lead to worse results. Perhaps that's what is happening with this homework, too much is being given to students who already believe they do worse at maths (and other subjects though the amount of homework was significantly less), stressing them out and actually making their results worse rather than better. Overall I think a general decrease in homework (not by much) might benefit students in their understanding of mathematics, though other subjects seem to be *mostly* fine.
 
+## Peer evaluation
+
+
+Positive :D : NO BUGS SPOTTED, (idk how you do it but its beautiful), and you worked out how to accept a blank input!!!!!!!!!!1!!!!!!!1!!!!!! Also ascii art I love that!!!!!!!!!!!!1!!!!! yayayayayaayayaya
+Negative :( : No editing teh data from the program (its oki you didnt have time and spent that time bug fixing) Also, there isn't alot of options especially for what type of chart (its oki thats not necessary)
+Implications :| : Very good lovely jovely program that is clean and well put together !!!!!!!!!!!!!!!!!!1!!!!!!!!!!!! Definitely an A tier program even with a tiny lack of variety!!!!!!!!!!!!!11!!!!!!
+you better put in my response word for word - Liam Smith
+
+So positive: No bugs, accepts blank inputs (really not that hard but ok Liam)
+
+Negatives: Cant edit the data in the program.
+
+Implication: So uh, I didnt get much peer evaluation if im being honest but, uh, apparently! I should maybe add more ability to "customise" the data and the way to view it (EVEN THOUGH IT DOES EVERYTHING REQUIRED BY THE MARKING CRITERIA)
 
 # EVALUATION
+
+My project meets my own requirements outline for both functional and nonfunctional requirements, it doesnt have errors (atleast according to Liam XD(you arent counting anything in brackets as apart of the project right (except for things i want to be included right?))) and I think its self explantory and makes sense, though im probably biased towards saying that. The project manager couldve used their time a bit better (thats me) but I think it all ended well, with the project being done to a satisfactory degree in the time given. One critique though, im defenitly biased, I dont like homework and im personally inclined to view the data as being homework negative. Im quite proud of my work here though I honestly didnt think I could do it.
