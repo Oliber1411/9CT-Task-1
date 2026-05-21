@@ -64,9 +64,71 @@ def clear_screen():
 def plot():
     subbywubby = input("Enter subject (maths/science/geography/english): ")
     if subbywubby.strip().lower() == "maths":
-        plt.bar(DSS_df["Math test grades"], DSS_df["Homework rate: maths"])
-        plt.xlabel("Math test grades")
-        plt.ylabel("Homework rate: maths")
-        plt.title("Math test grades vs Homework rate: maths")
+        test_grades_col = "Math test grades"
+        homework_col = "Homework rate: maths"
+        gradeles = ["A", "B", "C", "E"]
+        avg_homework_by_grade = []
+        
+        for grade in gradeles:
+            mask = DSS_df[test_grades_col].str.startswith(grade)
+            avg_homework = DSS_df.loc[mask, homework_col].astype(int).mean()
+            avg_homework_by_grade.append(avg_homework)
+
+        plt.bar(gradeles, avg_homework_by_grade)
+        plt.xlabel("Math Test Grades")
+        plt.ylabel("Average Homework Rate (maths)")
+        plt.title("Average Homework Rate by Math Test Grade")
         plt.show()
+    elif subbywubby.strip().lower() == "science":
+        test_grades_col = "Science test grades"
+        homework_col = "Homework rate: science"
+        gradeles = ["A", "B", "C", "E"]
+        avg_homework_by_grade = []
+        
+        for grade in gradeles:
+            mask = DSS_df[test_grades_col].str.startswith(grade)
+            avg_homework = DSS_df.loc[mask, homework_col].astype(int).mean()
+            avg_homework_by_grade.append(avg_homework)
+        plt.bar(gradeles, avg_homework_by_grade)
+        plt.xlabel("Science Test Grades")
+        plt.ylabel("Average Homework Rate (science)")
+        plt.title("Average Homework Rate by Science Test Grade")
+        plt.show()
+    elif subbywubby.strip().lower() == "geography":
+        test_grades_col = "Geography test grades"
+        homework_col = "Homework rate: geography"
+        gradeles = ["A", "B", "C", "E"]
+        avg_homework_by_grade = []
+        
+        for grade in gradeles:
+            mask = DSS_df[test_grades_col].str.startswith(grade)
+            avg_homework = DSS_df.loc[mask, homework_col].astype(int).mean()
+            avg_homework_by_grade.append(avg_homework)
+        
+
+        plt.bar(gradeles, avg_homework_by_grade)
+        plt.xlabel("Geography Test Grades")
+        plt.ylabel("Average Homework Rate (geography)")
+        plt.title("Average Homework Rate by Geography Test Grade")
+        plt.show()
+    elif subbywubby.strip().lower() == "english":
+        test_grades_col = "English test grades"
+        homework_col = "Homework rate: english"
+        gradeles = ["A", "B", "C", "E"]
+        avg_homework_by_grade = []
+        
+        for grade in gradeles:
+            mask = DSS_df[test_grades_col].str.startswith(grade)
+            avg_homework = DSS_df.loc[mask, homework_col].astype(int).mean()
+            avg_homework_by_grade.append(avg_homework)
+        
+        plt.bar(gradeles, avg_homework_by_grade)
+        plt.xlabel("English Test Grades")
+        plt.ylabel("Average Homework Rate (english)")
+        plt.title("Average Homework Rate by English Test Grade")
+        plt.show()
+    else:
+        print("Invalid subject. Please enter maths, science, geography, or english.")
+
+
     
