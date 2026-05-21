@@ -4,24 +4,37 @@ import pandas as pd
 DSS_df = pd.read_csv("Data/DSS.csv")
 
 def subj_choice():
-            subject = input("Enter subject (maths/science/geography/english): ")
-            if subject.strip().lower() == "maths":
-                print(DSS_df[["Math test grades", "Homework rate: maths"]])
-            elif subject.strip().lower() == "science":
-                print(DSS_df[["Science test grades", "Homework rate: science"]])
-            elif subject.strip().lower() == "geography":
-                print(DSS_df[["Geography test grades", "Homework rate: geography"]])
-            elif subject.strip().lower() == "english":
-                print(DSS_df[["English test grades", "Homework rate: english"]])
-            else:
-                print("Invalid subject, try again")
-                subj_choice()
+            print("--Data--Viewer--Interface--")
+            print("|                          |")
+            print("|    1. View grades        |")
+            print("|                          |")
+            print("|    2. View homework      |")
+            print("|                          |")
+            print("|    3. View subject       |")
+            print("|                          |")
+            print("|    4. Go back            |")
+            print("----------------------------")
+            query = input("uhh choose one").strip()
+            if query == "3":
+                subject = input("Enter subject (maths/science/geography/english): ")
+                if subject.strip().lower() == "maths":
+                    print(DSS_df[["Math test grades", "Homework rate: maths"]])
+                elif subject.strip().lower() == "science":
+                    print(DSS_df[["Science test grades", "Homework rate: science"]])
+                elif subject.strip().lower() == "geography":
+                    print(DSS_df[["Geography test grades", "Homework rate: geography"]])
+                elif subject.strip().lower() == "english":
+                    print(DSS_df[["English test grades", "Homework rate: english"]])
+                else:
+                    print("Invalid subject, try again")
+                    subj_choice()
 
 def chice():
     choice = input("Enter choice (1-4) ")
     if choice == "1":
         clear_screen()
         print(DSS_df)
+        choice()
     elif choice == "2":
         clear_screen()
         subj_choice()
@@ -43,7 +56,7 @@ def clear_screen():
 
 def plot():
     DSS_df.plot(
-        kind="scatter",
+        kind="bar",
          x= "Homework rate: maths",
          y="Math test grades",
          color="blue", 

@@ -8,19 +8,40 @@ DSS_df = pd.read_csv("Data/DSS.csv")
 
 
 def menu():
-    print("--Data--Viewer--Interface--")
-    print("|                          |")
-    print("|    1. View datasheet     |")
-    print("|                          |")
-    print("|    2. View Subject       |")
-    print("|                          |")
-    print("|  3. View average versus  |")
-    print("|                          |")
-    print("|    4. Quit               |")
-    print("----------------------------")
+    while True:
+        print("--Data--Viewer--Interface--")
+        print("|                          |")
+        print("|    1. View datasheet     |")
+        print("|                          |")
+        print("|    2. Search data        |")
+        print("|                          |")
+        print("|  3. View average versus  |")
+        print("|                          |")
+        print("|    6. Quit               |")
+        print("----------------------------")
 
+        choice = input("Select an option (1-6): ").strip()
 
+        if choice == '1':
+            print(DSS_df)
+            back = input("Enter to go back: ")
+        elif choice == '2':
+            subj_choice()
+            back = input("Enter to go back:")
+        elif choice == '3':
+            plot()
+            back = input("Enter to go back:")
+        elif choice == '4':
+            update_data_entry()
+        elif choice == '5':
+            save_changes()
+            print("Changes saved.")
+        elif choice == '6':
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid selection. Please choose a number between 1 and 6.")
 
 if __name__ == "__main__":
     menu()
-    chice()
+
